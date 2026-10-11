@@ -1,10 +1,12 @@
 export const COMPANY_INFO = {
   name: 'Neparica Inc',
-  tagline: '1 Stop SMB IT Partner',
-  heroHeadline: 'Your IT Partner for Smarter Business Growth.',
-  heroDescription: 'From IT consulting to custom software and cloud solutions, Neparica helps businesses grow with practical technology, transparent pricing, and reliable 24/7 global support.',
-  historyYears: '16+ Years',
-  clientsServed: '150+',
+  tagline: '1 Stop IT Partner',
+  heroHeadline: 'AI TRANSFORMATION & RIGHT DIGITAL SOLUTIONS',
+  heroSubheadline: 'Your Business. Smarter. Stronger. Ready to Grow.',
+  heroDescription: 'Simplify operations, empower your team, and scale with confidence through IT, AI, and software solutions.',
+  taglineSlogan: 'Local Touch + Global Talent = Your Growth.',
+  historyYears: '22+ Years',
+  clientsServed: '260+',
   globalSupport: '24/7',
   
   contact: {
@@ -30,27 +32,27 @@ export const COMPANY_INFO = {
   },
 
   about: {
-    summary: 'Neparica, a global IT company based in Chicago, USA, has been providing a full range of IT-related services and solutions to governments and small to mid-size businesses around the globe since 2004.',
+    summary: 'Neparica, a global IT company based in Chicago, USA, has been providing a full range of IT and AI solutions to governments and small to mid-size businesses around the globe since 2004.',
     paragraphs: [
-      'Neparica, a global IT company based in Chicago, USA, has been providing a full range of IT-related services and solutions to governments and small to mid-size businesses around the globe since 2004. With our proven 4D delivery approach, Neparica Discovers, Designs, Develops, and Delivers IT products and solutions that empower businesses to compete in today’s challenging environment.',
+      'Neparica, a global IT company based in Chicago, USA, has been providing a full range of IT and AI solutions to governments and small to mid-size businesses around the globe since 2004. With our proven 4D delivery approach, Neparica Discovers, Designs, Develops, and Delivers IT products and solutions that empower businesses to compete in today’s challenging environment.',
       'Neparica helps clients grow their businesses by delivering on-time, quality projects through our pool of Global Resources. We provide IT services and solutions in all major technology disciplines by leveraging our technical expertise, deep domain knowledge, and strategic alliances with leading technology providers such as Microsoft, Amazon AWS, and Oracle.',
       'We truly understand the IT challenges faced by small and medium-sized businesses. On one hand, growing companies often do not have the budget for large, designated in-house IT teams. On the other hand, they cannot count on massive IT conglomerates to understand their operational models or prescribe the "Right People & Right Technology." That is where Neparica steps in as your trusted, accessible, and affordable partner for sustainable business growth.',
       'Our software engineers bring multi-platform skills across web applications, mobile apps, enterprise cloud systems, and business process automation. Our project managers employ structured methodologies that ensure complex initiatives are delivered on time, within budget, and strictly to specification.'
     ],
-    vision: 'Neparica strives to be a leading "1 Stop SMB IT Partner" in helping Small & Mid-size Businesses (SMBs) leverage innovative technologies to reach and maximize their strategic goals. Our vision is to enrich and empower businesses with dependable, scalable digital tools that address real-world challenges and unlock lasting value.',
+    vision: 'Neparica strives to be a leading "1 Stop IT Partner" in helping Small & Mid-size Businesses (SMBs) leverage innovative technologies to reach and maximize their strategic goals. Our vision is to enrich and empower businesses with dependable, scalable digital tools that address real-world challenges and unlock lasting value.',
     mission: 'Our mission is to utilize cutting-edge technologies to offer "Right & Affordable Solutions" to our clients by analyzing their operational and business processes before gathering requirements. We deliver on-time, reliable IT services with uncompromised quality, providing a collaborative experience that advances client business growth.'
   },
 
   competency: [
     {
       label: 'History',
-      value: 'Over 16 Years',
-      description: 'Founded in 2004 with Chicago business roots and a proven record of longevity and technical stability.'
+      value: 'Over 22 Years',
+      description: 'Evolving daily since 2004 with Chicago business roots and a proven record of longevity and technical innovation.'
     },
     {
       label: 'Experience',
-      value: '150+ Clients',
-      description: 'Successfully served more than 150 small and mid-sized enterprises across diverse commercial sectors.'
+      value: '260+ Clients',
+      description: 'Successfully served more than 260 small and mid-sized enterprises across diverse commercial sectors.'
     },
     {
       label: 'Commitment',

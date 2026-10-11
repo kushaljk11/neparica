@@ -87,94 +87,108 @@ export function Hero() {
   }, []);
 
   return (
-    <section ref={heroRef} className="relative bg-white pt-12 pb-16 md:pt-20 md:pb-28 overflow-hidden border-b border-[#E5E9EF]">
+    <section ref={heroRef} className="relative bg-white pt-12 pb-16 md:pt-20 md:pb-28 overflow-hidden border-b border-border-light">
       {/* Background subtle gradient elements */}
-      <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[#0F3A5F]/5 rounded-full blur-3xl pointer-events-none -mr-32 -mt-32" />
-      <div className="absolute bottom-0 left-10 w-96 h-96 bg-[#27DDE8]/5 rounded-full blur-2xl pointer-events-none" />
+      <div className="absolute top-0 right-0 w-125 h-125 bg-primary/5 rounded-full blur-3xl pointer-events-none -mr-32 -mt-32" />
+      <div className="absolute bottom-0 left-10 w-96 h-96 bg-accent-cyan/5 rounded-full blur-2xl pointer-events-none" />
 
       <Container className="relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-10 xl:gap-12 items-center">
           {/* Left Column: Copy & Actions */}
-          <div className="lg:col-span-7 space-y-6">
+          <div className="lg:col-span-6 xl:col-span-6 space-y-6">
             <div
               ref={eyebrowRef}
-              className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#0F3A5F]/10 border border-[#0F3A5F]/15 text-[#0F3A5F] text-xs sm:text-sm font-semibold"
+              className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-primary/10 border border-primary/15 text-primary text-xs sm:text-sm font-semibold"
             >
-              <span className="w-2 h-2 rounded-full bg-[#0F3A5F] animate-pulse" />
-              <span>1 Stop SMB IT Partner Since 2004</span>
+              <span className="w-2 h-2 rounded-full bg-accent-red animate-pulse" />
+              <span>1 Stop IT Partner Since 2004</span>
             </div>
 
-            <h1
-              ref={headingRef}
-              className="text-3xl sm:text-5xl xl:text-6xl font-semibold tracking-tight text-[#141820] leading-[1.12]"
-            >
-              Your IT Partner for <span className="text-[#0F3A5F]">Smarter Business Growth</span>.
-            </h1>
+            <div className="space-y-3">
+              <h1
+                ref={headingRef}
+                className="text-3xl sm:text-5xl xl:text-5xl font-extrabold tracking-tight text-primary leading-[1.12]"
+              >
+                AI TRANSFORMATION <span className="text-accent-red">&amp;</span>{' '}
+                <span className="block text-primary">DIGITAL SOLUTIONS</span>
+              </h1>
+
+              <p className="text-lg sm:text-xl font-bold text-text-main tracking-tight">
+                Your Business. Smarter. Stronger. Ready to Grow.
+              </p>
+            </div>
 
             <p
               ref={descRef}
-              className="text-base sm:text-lg text-[#647080] leading-relaxed max-w-xl"
+              className="text-base sm:text-lg text-text-muted leading-relaxed max-w-xl"
             >
-              From IT consulting to custom software and cloud solutions, Neparica helps small and mid-sized businesses scale with practical technology, transparent costs, and reliable 24/7 global support.
+              Simplify operations, empower your team, and scale with confidence through IT, AI, and software solutions.
             </p>
+
+            {/* Red accent bar + Tagline */}
+            <div className="flex items-center gap-3 pt-1">
+              <span className="text-base sm:text-lg font-bold italic text-primary">
+                Local Touch + Global Talent = Your Growth.
+              </span>
+            </div>
 
             <div
               ref={ctaRef}
               className="pt-2 flex flex-col sm:flex-row items-stretch sm:items-center gap-3.5"
             >
-              <Button href="/services" variant="primary" size="lg" withArrow>
-                Explore Services
+              <Button href="/contact" variant="accent" size="lg" withArrow>
+                Let&apos;s Talk About Your Business
               </Button>
-              <Button href="/contact" variant="secondary" size="lg">
-                Get in Touch
+              <Button href="/services" variant="secondary" size="lg">
+                Explore Services
               </Button>
             </div>
 
             {/* Credibility highlights */}
             <div
               ref={credibilityRef}
-              className="pt-6 border-t border-[#E5E9EF] grid grid-cols-2 sm:grid-cols-3 gap-4 text-xs text-[#647080]"
+              className="pt-6 border-t border-border-light grid grid-cols-2 sm:grid-cols-3 gap-4 text-xs sm:text-sm text-text-muted"
             >
               <div className="flex items-center gap-2">
-                <CheckCircle2 className="w-4 h-4 text-[#0F3A5F] shrink-0" />
-                <span>Chicago Engagement</span>
+                <CheckCircle2 className="w-4 h-4 text-accent-red shrink-0" />
+                <span className="font-medium text-text-main">260+ Clients Served</span>
               </div>
               <div className="flex items-center gap-2">
-                <ShieldCheck className="w-4 h-4 text-[#0F3A5F] shrink-0" />
-                <span>30–50% Cost Savings</span>
+                <ShieldCheck className="w-4 h-4 text-primary shrink-0" />
+                <span className="font-medium text-text-main">Evolving Daily for 22+ Years</span>
               </div>
               <div className="flex items-center gap-2">
-                <Clock className="w-4 h-4 text-[#0F3A5F] shrink-0" />
-                <span>24/7 Delivery Cycles</span>
+                <Clock className="w-4 h-4 text-primary shrink-0" />
+                <span className="font-medium text-text-main">24/7 Delivery Cycles</span>
               </div>
             </div>
           </div>
 
           {/* Right Column: Visual Composition */}
-          <div ref={visualRef} className="lg:col-span-5 relative">
-            <div className="relative mx-auto max-w-md lg:max-w-none">
+          <div ref={visualRef} className="lg:col-span-6 xl:col-span-6 relative">
+            <div className="relative mx-auto max-w-lg lg:max-w-none w-full">
               {/* Main Card */}
-              <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-[#E5E9EF] bg-[#F6F7F9]">
-                <div className="relative h-72 sm:h-96 w-full">
+              <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-border-light bg-[#0c1427]">
+                <div className="relative h-80 sm:h-105 lg:h-120 xl:h-130 w-full">
                   <Image
-                    src="/images/it-banner.jpg"
-                    alt="Neparica IT Consulting and Software Engineering"
+                    src="/images/ai-transformation-hero.jpg"
+                    alt="AI Transformation & Right Digital Solutions - Neparica"
                     fill
                     priority
                     className="object-cover"
                     sizes="(max-width: 1024px) 100vw, 500px"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#101827]/90 via-[#101827]/30 to-transparent" />
-                  
+                  <div className="absolute inset-0 bg-linear-to-t from-[#0c1427]/80 via-transparent to-transparent pointer-events-none" />
+
                   {/* Floating Metric Card inside */}
-                  <div className="absolute bottom-5 left-5 right-5 p-4 rounded-xl bg-white/95 backdrop-blur border border-white/40 shadow-lg text-[#141820]">
+                  <div className="absolute bottom-5 left-5 right-5 p-4 rounded-xl bg-white/95 backdrop-blur border border-white/40 shadow-lg text-text-main">
                     <div className="flex items-center justify-between">
                       <div>
-                        <div className="text-xs uppercase font-semibold text-[#0F3A5F]">Proven 4D Delivery</div>
-                        <div className="text-sm font-medium text-[#141820]">Discover • Design • Develop • Deliver</div>
+                        <div className="text-xs uppercase font-semibold text-primary">Proven 4D Delivery Method</div>
+                        <div className="text-sm font-medium text-text-main">Discover • Design • Develop • Deliver</div>
                       </div>
-                      <span className="text-xs font-bold text-[#A31718] bg-[#A31718]/10 px-2.5 py-1 rounded">
-                        16+ Yrs
+                      <span className="text-xs font-bold text-accent-red bg-accent-red/10 px-2.5 py-1 rounded">
+                        22+ Yrs
                       </span>
                     </div>
                   </div>
@@ -182,13 +196,13 @@ export function Hero() {
               </div>
 
               {/* Floating Badge */}
-              <div className="hidden sm:flex absolute -top-4 -left-4 items-center gap-3 bg-white p-3.5 rounded-xl shadow-lg border border-[#E5E9EF] transition-transform duration-300 hover:scale-105">
-                <div className="w-10 h-10 rounded-lg bg-[#0F3A5F]/10 flex items-center justify-center text-[#0F3A5F]">
+              <div className="hidden sm:flex absolute -top-4 -left-4 items-center gap-3 bg-white p-3.5 rounded-xl shadow-lg border border-border-light transition-transform duration-300 hover:scale-105">
+                <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
                   <Users className="w-5 h-5" />
                 </div>
                 <div>
-                  <div className="text-xs text-[#647080]">Clients Served</div>
-                  <div className="text-sm font-bold text-[#141820]">150+ SMB Companies</div>
+                  <div className="text-xs text-text-muted">Clients Served</div>
+                  <div className="text-sm font-bold text-text-main">260+ Businesses</div>
                 </div>
               </div>
             </div>
