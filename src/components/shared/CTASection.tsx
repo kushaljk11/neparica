@@ -117,7 +117,7 @@ export function CTASection({
             ref={badgeRef}
             className="inline-flex items-center gap-2 text-xs font-semibold tracking-wider uppercase text-accent-cyan bg-accent-cyan/10 border border-accent-cyan/20 px-3.5 py-1.5 rounded-full mb-5"
           >
-            1 Stop IT Partner
+            Your ONE Stop IT Partner
           </div>
           <h2
             ref={headingRef}

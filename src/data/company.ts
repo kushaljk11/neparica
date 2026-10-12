@@ -1,6 +1,6 @@
 export const COMPANY_INFO = {
   name: 'Neparica Inc',
-  tagline: '1 Stop IT Partner',
+  tagline: 'Your ONE Stop IT Partner',
   heroHeadline: 'AI TRANSFORMATION & RIGHT DIGITAL SOLUTIONS',
   heroSubheadline: 'Your Business. Smarter. Stronger. Ready to Grow.',
   heroDescription: 'Simplify operations, empower your team, and scale with confidence through IT, AI, and software solutions.',
@@ -39,7 +39,7 @@ export const COMPANY_INFO = {
       'We truly understand the IT challenges faced by small and medium-sized businesses. On one hand, growing companies often do not have the budget for large, designated in-house IT teams. On the other hand, they cannot count on massive IT conglomerates to understand their operational models or prescribe the "Right People & Right Technology." That is where Neparica steps in as your trusted, accessible, and affordable partner for sustainable business growth.',
       'Our software engineers bring multi-platform skills across web applications, mobile apps, enterprise cloud systems, and business process automation. Our project managers employ structured methodologies that ensure complex initiatives are delivered on time, within budget, and strictly to specification.'
     ],
-    vision: 'Neparica strives to be a leading "1 Stop IT Partner" in helping Small & Mid-size Businesses (SMBs) leverage innovative technologies to reach and maximize their strategic goals. Our vision is to enrich and empower businesses with dependable, scalable digital tools that address real-world challenges and unlock lasting value.',
+    vision: 'Neparica strives to be a leading "Your ONE Stop IT Partner" in helping Small & Mid-size Businesses (SMBs) leverage innovative technologies to reach and maximize their strategic goals. Our vision is to enrich and empower businesses with dependable, scalable digital tools that address real-world challenges and unlock lasting value.',
     mission: 'Our mission is to utilize cutting-edge technologies to offer "Right & Affordable Solutions" to our clients by analyzing their operational and business processes before gathering requirements. We deliver on-time, reliable IT services with uncompromised quality, providing a collaborative experience that advances client business growth.'
   },
 

@@ -106,7 +106,7 @@ export default function AboutUsPage() {
                   </div>
                   <h3 className="text-xl font-bold text-[#141820] mb-3">Our Vision</h3>
                   <p className="text-sm text-[#647080] leading-relaxed">
-                    Neparica strives to become a leading &quot;1 Stop IT Partner&quot; in helping Small &amp; Mid-size Businesses (SMBs) through innovative technologies to reach and maximize client business goals by providing reliable and scalable IT services and solutions.
+                    Neparica strives to become a leading &quot;Your ONE Stop IT Partner&quot; in helping Small &amp; Mid-size Businesses (SMBs) through innovative technologies to reach and maximize client business goals by providing reliable and scalable IT services and solutions.
                   </p>
                   <p className="text-sm text-[#647080] leading-relaxed mt-3">
                     Neparica, with utmost customer-centricity, consistently endeavors to be technologically innovative in order to enable enterprises to leverage technology for significant business advantages. Ultimately, our vision is to enrich and delight small and mid-sized businesses through dependable technologies that matter most.

@@ -115,7 +115,7 @@ export function MobileMenu() {
                     <div className="relative h-10 w-44 sm:h-12 sm:w-52">
                       <Image
                         src="/images/logo.png"
-                        alt="Neparica - 1 Stop IT Partner"
+                        alt="Neparica - Your ONE Stop IT Partner"
                         fill
                         priority
                         sizes="(max-width: 640px) 180px, 220px"

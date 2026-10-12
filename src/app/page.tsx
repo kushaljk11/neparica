@@ -11,10 +11,10 @@ import { PartnershipStrength } from '@/components/home/PartnershipStrength';
 import { CTASection } from '@/components/shared/CTASection';
 
 export const metadata: Metadata = {
-  title: 'Neparica – 1 Stop IT Partner | IT Consulting & Software Solutions',
+  title: 'Neparica – Your ONE Stop IT Partner | IT Consulting & Software Solutions',
   description: 'Neparica is a premier global IT services partner based in Chicago, providing IT consulting, custom web & mobile software, cloud hosting, and 24/7 technical support for growing SMBs.',
   openGraph: {
-    title: 'Neparica – 1 Stop IT Partner',
+    title: 'Neparica – Your ONE Stop IT Partner',
     description: 'Providing comprehensive IT consulting, custom software, and cloud solutions to SMBs since 2004.',
     url: 'https://www.neparica.com',
     siteName: 'Neparica Inc',
