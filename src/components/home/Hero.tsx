@@ -4,7 +4,7 @@ import React, { useEffect, useRef } from 'react';
 import Image from 'next/image';
 import { Container } from '@/components/shared/Container';
 import { Button } from '@/components/ui/Button';
-import { CheckCircle2, ShieldCheck, Clock, Users } from 'lucide-react';
+import { CheckCircle2, ShieldCheck, Users } from 'lucide-react';
 import gsap from 'gsap';
 
 export function Hero() {
@@ -147,19 +147,15 @@ export function Hero() {
             {/* Credibility highlights */}
             <div
               ref={credibilityRef}
-              className="pt-6 border-t border-border-light grid grid-cols-2 sm:grid-cols-3 gap-4 text-xs sm:text-sm text-text-muted"
+              className="pt-6 border-t border-border-light flex flex-wrap items-center gap-6 sm:gap-8 text-xs sm:text-sm text-text-muted"
             >
               <div className="flex items-center gap-2">
                 <CheckCircle2 className="w-4 h-4 text-accent-red shrink-0" />
-                <span className="font-medium text-text-main">260+ Clients Served</span>
+                <span className="font-medium text-text-main whitespace-nowrap">260+ Clients Served</span>
               </div>
               <div className="flex items-center gap-2">
                 <ShieldCheck className="w-4 h-4 text-primary shrink-0" />
-                <span className="font-medium text-text-main">Evolving Daily for 22+ Years</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <Clock className="w-4 h-4 text-primary shrink-0" />
-                <span className="font-medium text-text-main">24/7 Delivery Cycles</span>
+                <span className="font-medium text-text-main whitespace-nowrap">Evolving Daily for 22+ Years</span>
               </div>
             </div>
           </div>
