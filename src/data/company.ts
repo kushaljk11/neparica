@@ -8,7 +8,7 @@ export const COMPANY_INFO = {
   historyYears: '22+ Years',
   clientsServed: '260+',
   globalSupport: '24/7',
-  
+
   contact: {
     building: 'Continental Office Plaza',
     address: '129 Fairfield Way, Suite 306D',

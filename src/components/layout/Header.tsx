@@ -58,7 +58,7 @@ export function Header() {
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-6">
               <span className="font-semibold text-[#0F3A5F]">
-                1 Stop SMB IT Partner
+                1 Stop IT Partner
               </span>
               <span className="text-[#cbd5e1]">•</span>
               <a
@@ -107,7 +107,7 @@ export function Header() {
               <div className="relative w-44 sm:w-52 h-10 sm:h-12 transition-transform duration-200 group-hover:scale-[1.01]">
                 <Image
                   src="/images/logo.png"
-                  alt="Neparica - 1 Stop SMB IT Partner"
+                  alt="Neparica - 1 Stop IT Partner"
                   fill
                   priority
                   className="object-contain object-left"

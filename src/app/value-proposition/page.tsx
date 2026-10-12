@@ -383,7 +383,7 @@ export default function ValuePropositionPage() {
                     </h3>
                   </div>
 
-                  <p className="text-[11px] text-[#647080] mt-2 leading-relaxed line-clamp-2">
+                  <p className="text-base md:text-[11px] text-[#647080] mt-2 leading-relaxed line-clamp-2">
                     {item.subtitle}
                   </p>
                 </a>

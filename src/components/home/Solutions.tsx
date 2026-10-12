@@ -58,7 +58,7 @@ export function Solutions() {
   }, []);
 
   return (
-    <section ref={sectionRef} className="bg-white py-16 sm:py-20 md:py-24 border-b border-[#E5E9EF]">
+    <section ref={sectionRef} className="bg-white py-16 sm:py-20 md:py-24 border-b border-border-light">
       <Container>
         <SectionHeading
           eyebrow="Software & Platforms"
@@ -75,7 +75,7 @@ export function Solutions() {
             return (
               <div
                 key={solution.slug}
-                className="solution-card group relative bg-[#F6F7F9] rounded-xl border border-[#E5E9EF] overflow-hidden flex flex-col justify-between transition-all duration-300 hover:border-[#0F3A5F] hover:shadow-xl hover:-translate-y-1.5"
+                className="solution-card group relative bg-subtle rounded-xl border border-border-light overflow-hidden flex flex-col justify-between transition-all duration-300 hover:border-primary hover:shadow-xl hover:-translate-y-1.5"
               >
                 <div>
                   {/* Image header with smooth scale transition */}
@@ -88,10 +88,10 @@ export function Solutions() {
                         className="object-cover transition-transform duration-500 ease-out group-hover:scale-105"
                         sizes="(max-width: 768px) 100vw, 400px"
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-[#141820]/80 via-transparent to-transparent" />
-                      
+                      <div className="absolute inset-0 bg-linear-to-t from-text-main/80 via-transparent to-transparent" />
+
                       <div className="absolute bottom-3 left-4 right-4 flex items-center justify-between text-white">
-                        <span className="text-xs font-semibold uppercase tracking-wider bg-[#0F3A5F]/90 backdrop-blur px-2.5 py-1 rounded">
+                        <span className="text-xs font-semibold uppercase tracking-wider bg-primary/90 backdrop-blur px-2.5 py-1 rounded">
                           {solution.title}
                         </span>
                       </div>
@@ -100,15 +100,15 @@ export function Solutions() {
 
                   <div className="p-6">
                     <div className="flex items-center gap-3 mb-3">
-                      <div className="w-9 h-9 rounded-md bg-[#0F3A5F]/10 text-[#0F3A5F] flex items-center justify-center shrink-0 transition-colors duration-300 group-hover:bg-[#0F3A5F] group-hover:text-white">
+                      <div className="w-9 h-9 rounded-md bg-primary/10 text-[#000000] flex items-center justify-center shrink-0 transition-colors duration-300 group-hover:bg-primary group-hover:text-white">
                         <Icon className="w-4 h-4" />
                       </div>
-                      <h3 className="text-lg font-semibold text-[#141820] leading-snug group-hover:text-[#0F3A5F] transition-colors">
+                      <h3 className="text-lg font-semibold text-text-main leading-snug group-hover:text-primary transition-colors">
                         {solution.title}
                       </h3>
                     </div>
 
-                    <p className="text-xs sm:text-sm text-[#647080] leading-relaxed mb-4">
+                    <p className="text-xs sm:text-sm text-text-muted leading-relaxed mb-4">
                       {solution.shortDescription}
                     </p>
 
@@ -116,7 +116,7 @@ export function Solutions() {
                       {solution.techStack?.slice(0, 3).map((tech) => (
                         <span
                           key={tech}
-                          className="text-[11px] font-medium bg-white px-2 py-0.5 rounded text-[#647080] border border-[#E5E9EF]"
+                          className="text-base md:text-[11px] font-medium bg-white px-2 py-0.5 rounded text-text-muted border border-border-light"
                         >
                           {tech}
                         </span>
@@ -126,10 +126,10 @@ export function Solutions() {
                 </div>
 
                 <div className="p-6 pt-0">
-                  <div className="pt-4 border-t border-[#E5E9EF]">
+                  <div className="pt-4 border-t border-border-light">
                     <Link
                       href={targetHref}
-                      className="inline-flex items-center gap-1.5 text-xs sm:text-sm font-semibold text-[#0F3A5F] group-hover:text-[#0a2740] transition-colors"
+                      className="inline-flex items-center gap-1.5 text-xs sm:text-sm font-semibold text-primary group-hover:text-primary-dark transition-colors"
                     >
                       <span>Explore Solution</span>
                       <ArrowRight className="w-3.5 h-3.5 transition-transform duration-300 group-hover:translate-x-1" />

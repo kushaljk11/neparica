@@ -44,6 +44,32 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* Responsive Typography: Enforce minimum 16px (1rem) font size on mobile / small devices */
+@media (max-width: 767.98px) {
+  :root {
+    --text-xs: 1rem;
+    --text-xs--line-height: calc(1.5 / 1);
+    --text-sm: 1rem;
+    --text-sm--line-height: calc(1.5 / 1);
+  }
+
+  .text-\[10px\],
+  .text-\[11px\],
+  .text-\[12px\],
+  .text-\[13px\],
+  .text-\[14px\],
+  .text-\[15px\] {
+    font-size: 1rem !important;
+    line-height: 1.5rem !important;
+  }
+
+  input,
+  textarea,
+  select {
+    font-size: 1rem;
+  }
+}
+
 /* Custom scrollbar */
 ::-webkit-scrollbar {
   width: 8px;

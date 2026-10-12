@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useId, useCallback } from 'react';
 import { createPortal } from 'react-dom';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -14,108 +14,138 @@ export function MobileMenu() {
   const [isOpen, setIsOpen] = useState(false);
   const [expandedSection, setExpandedSection] = useState<string | null>(null);
   const [mounted, setMounted] = useState(false);
+
   const pathname = usePathname();
+  const menuId = useId();
 
   useEffect(() => {
     setMounted(true);
   }, []);
 
-  const toggleOpen = () => setIsOpen((prev) => !prev);
-  const closeMenu = () => {
+  const closeMenu = useCallback(() => {
     setIsOpen(false);
     setExpandedSection(null);
+  }, []);
+
+  const toggleOpen = () => {
+    setIsOpen((prev) => !prev);
   };
 
   const toggleSection = (title: string) => {
     setExpandedSection((prev) => (prev === title ? null : title));
   };
 
-  // Close menu on route change
+  // Close the drawer when the route changes.
   useEffect(() => {
     closeMenu();
-  }, [pathname]);
+  }, [pathname, closeMenu]);
 
-  // Lock body scroll when mobile menu is open
+  // Lock body scrolling while the drawer is open.
   useEffect(() => {
-    if (isOpen) {
-      const originalStyle = window.getComputedStyle(document.body).overflow;
-      document.body.style.overflow = 'hidden';
-      return () => {
-        document.body.style.overflow = originalStyle;
-      };
-    }
+    if (!isOpen) return;
+
+    const originalOverflow = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+
+    return () => {
+      document.body.style.overflow = originalOverflow;
+    };
   }, [isOpen]);
 
-  // Close menu on escape key
+  // Close the drawer using Escape.
   useEffect(() => {
-    const handleKeyDown = (e: KeyboardEvent) => {
-      if (e.key === 'Escape') {
+    if (!isOpen) return;
+
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') {
         closeMenu();
       }
     };
+
     window.addEventListener('keydown', handleKeyDown);
-    return () => window.removeEventListener('keydown', handleKeyDown);
-  }, []);
+
+    return () => {
+      window.removeEventListener('keydown', handleKeyDown);
+    };
+  }, [isOpen, closeMenu]);
 
   return (
     <div className="lg:hidden">
-      {/* Trigger Button in Header */}
+      {/* Menu trigger */}
       <button
+        type="button"
         onClick={toggleOpen}
         aria-label={isOpen ? 'Close navigation menu' : 'Open navigation menu'}
         aria-expanded={isOpen}
-        className="p-2.5 min-h-11 min-w-11 flex items-center justify-center text-text-main hover:text-primary focus:outline-none focus:ring-2 focus:ring-primary/20 rounded-md transition-colors"
+        aria-controls={menuId}
+        className="flex min-h-11 min-w-11 items-center justify-center rounded-md p-2.5 text-text-main transition-colors hover:text-primary focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
       >
-        <Menu className="w-6 h-6" />
+        {isOpen ? (
+          <X className="size-6" aria-hidden="true" />
+        ) : (
+          <Menu className="size-6" aria-hidden="true" />
+        )}
       </button>
 
-      {/* Full-screen Portal Drawer */}
+      {/* Full-screen navigation drawer */}
       {mounted &&
         createPortal(
           <AnimatePresence>
             {isOpen && (
               <motion.div
                 key="mobile-menu-drawer"
+                id={menuId}
+                role="dialog"
+                aria-modal="true"
+                aria-label="Mobile navigation"
                 initial={{ opacity: 0, y: -8 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -8 }}
                 transition={{ duration: 0.2, ease: 'easeOut' }}
-                className="fixed inset-0 z-[100] bg-white flex flex-col h-dvh w-screen overflow-hidden"
+                className="fixed inset-0 z-100 flex h-dvh w-full flex-col overflow-hidden bg-white"
               >
-                {/* Header inside Drawer */}
-                <div className="flex items-center justify-between px-4 sm:px-6 h-16 sm:h-20 border-b border-border-light bg-white shrink-0">
-                  <Link href="/" onClick={closeMenu} className="flex items-center gap-3">
-                    <div className="relative w-44 sm:w-52 h-10 sm:h-12">
+                {/* Drawer header */}
+                <header className="flex h-16 shrink-0 items-center justify-between border-b border-border-light bg-white px-4 sm:h-20 sm:px-6">
+                  <Link
+                    href="/"
+                    onClick={closeMenu}
+                    aria-label="Neparica home"
+                    className="flex items-center gap-3"
+                  >
+                    <div className="relative h-10 w-44 sm:h-12 sm:w-52">
                       <Image
                         src="/images/logo.png"
-                        alt="Neparica - 1 Stop SMB IT Partner"
+                        alt="Neparica - 1 Stop IT Partner"
                         fill
                         priority
-                        className="object-contain object-left"
                         sizes="(max-width: 640px) 180px, 220px"
+                        className="object-contain object-left"
                       />
                     </div>
                   </Link>
 
                   <button
+                    type="button"
                     onClick={closeMenu}
                     aria-label="Close navigation menu"
-                    className="p-2.5 min-h-[44px] min-w-[44px] flex items-center justify-center text-[#141820] hover:text-[#0F3A5F] focus:outline-none focus:ring-2 focus:ring-[#0F3A5F]/20 rounded-md transition-colors"
+                    className="flex min-h-11 min-w-11 items-center justify-center rounded-md p-2.5 text-text-main transition-colors hover:text-primary focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
                   >
-                    <X className="w-6 h-6" />
+                    <X className="size-6" aria-hidden="true" />
                   </button>
-                </div>
+                </header>
 
-                {/* Scrollable Navigation Body */}
-                <div className="flex-1 overflow-y-auto px-5 py-5 divide-y divide-[#E5E9EF]">
-                  <nav className="pb-6 space-y-1">
+                {/* Scrollable navigation */}
+                <div className="flex-1 divide-y divide-border-light overflow-y-auto overscroll-contain px-5 py-5">
+                  <nav aria-label="Main navigation" className="space-y-1 pb-6">
                     {MAIN_NAVIGATION.map((item) => {
                       const isExactMatch = pathname === item.href;
-                      const isChildMatch =
-                        !MAIN_NAVIGATION.some((topItem) => topItem !== item && topItem.href === pathname) &&
-                        Boolean(item.children && item.children.some((c) => pathname === c.href));
+
+                      const isChildMatch = Boolean(
+                        item.children?.some((child) => pathname === child.href)
+                      );
+
                       const isActive = isExactMatch || isChildMatch;
-                      const hasChildren = Boolean(item.children && item.children.length > 0);
+                      const hasChildren = Boolean(item.children?.length);
                       const isExpanded = expandedSection === item.title;
 
                       return (
@@ -123,41 +153,58 @@ export function MobileMenu() {
                           {hasChildren ? (
                             <div>
                               <button
+                                type="button"
                                 onClick={() => toggleSection(item.title)}
                                 aria-expanded={isExpanded}
-                                className={`w-full flex items-center justify-between py-2.5 px-3 min-h-[44px] text-left text-base font-medium rounded-md transition-colors ${isActive
-                                    ? 'text-[#0F3A5F] bg-[#0F3A5F]/5 font-semibold'
-                                    : 'text-[#141820] hover:bg-[#F6F7F9]'
+                                className={`flex min-h-11 w-full items-center justify-between rounded-md px-3 py-2.5 text-left text-base font-medium transition-colors ${isActive
+                                  ? 'bg-primary/5 font-semibold text-primary'
+                                  : 'text-text-main hover:bg-subtle'
                                   }`}
                               >
                                 <span>{item.title}</span>
+
                                 <ChevronDown
-                                  className={`w-4 h-4 text-[#647080] transition-transform duration-200 ${isExpanded ? 'rotate-180 text-[#0F3A5F]' : ''
+                                  aria-hidden="true"
+                                  className={`size-4 text-text-muted transition-transform duration-200 ${isExpanded
+                                    ? 'rotate-180 text-primary'
+                                    : ''
                                     }`}
                                 />
                               </button>
-                              <AnimatePresence>
+
+                              <AnimatePresence initial={false}>
                                 {isExpanded && (
                                   <motion.div
                                     initial={{ height: 0, opacity: 0 }}
                                     animate={{ height: 'auto', opacity: 1 }}
                                     exit={{ height: 0, opacity: 0 }}
-                                    transition={{ duration: 0.2, ease: 'easeInOut' }}
-                                    className="overflow-hidden ml-3 pl-3 border-l-2 border-[#0F3A5F]/20 my-1 space-y-1"
+                                    transition={{
+                                      duration: 0.2,
+                                      ease: 'easeInOut',
+                                    }}
+                                    className="my-1 ml-3 space-y-1 overflow-hidden border-l-2 border-primary/20 pl-3"
                                   >
-                                    {item.children?.map((child) => (
-                                      <Link
-                                        key={child.title}
-                                        href={child.href}
-                                        onClick={closeMenu}
-                                        className={`py-2.5 px-2.5 min-h-[44px] flex items-center text-sm rounded-md transition-colors ${pathname === child.href
-                                            ? 'text-[#0F3A5F] font-semibold bg-[#0F3A5F]/5'
-                                            : 'text-[#647080] hover:text-[#141820]'
-                                          }`}
-                                      >
-                                        {child.title}
-                                      </Link>
-                                    ))}
+                                    {item.children?.map((child) => {
+                                      const isChildActive =
+                                        pathname === child.href;
+
+                                      return (
+                                        <Link
+                                          key={child.title}
+                                          href={child.href}
+                                          onClick={closeMenu}
+                                          aria-current={
+                                            isChildActive ? 'page' : undefined
+                                          }
+                                          className={`flex min-h-11 items-center rounded-md px-2.5 py-2.5 text-base transition-colors ${isChildActive
+                                            ? 'bg-primary/5 font-semibold text-primary'
+                                            : 'text-text-muted hover:text-text-main'
+                                            }`}
+                                        >
+                                          {child.title}
+                                        </Link>
+                                      );
+                                    })}
                                   </motion.div>
                                 )}
                               </AnimatePresence>
@@ -166,9 +213,12 @@ export function MobileMenu() {
                             <Link
                               href={item.href}
                               onClick={closeMenu}
-                              className={`block py-2.5 px-3 min-h-[44px] flex items-center text-base font-medium rounded-md transition-colors ${pathname === item.href
-                                  ? 'text-[#0F3A5F] bg-[#0F3A5F]/5 font-semibold'
-                                  : 'text-[#141820] hover:bg-[#F6F7F9]'
+                              aria-current={
+                                isExactMatch ? 'page' : undefined
+                              }
+                              className={`flex min-h-11 items-center rounded-md px-3 py-2.5 text-base font-medium transition-colors ${isExactMatch
+                                ? 'bg-primary/5 font-semibold text-primary'
+                                : 'text-text-main hover:bg-subtle'
                                 }`}
                             >
                               {item.title}
@@ -179,32 +229,45 @@ export function MobileMenu() {
                     })}
                   </nav>
 
-                  <div className="pt-6 space-y-4">
+                  {/* Contact section */}
+                  <section
+                    aria-label="Contact information"
+                    className="space-y-4 pt-6"
+                  >
                     <Link
                       href="/contact"
                       onClick={closeMenu}
-                      className="w-full min-h-[48px] flex items-center justify-center bg-[#0F3A5F] hover:bg-[#0a2740] text-white text-base font-semibold px-5 py-3 rounded-md shadow-sm transition-colors active:scale-[0.99]"
+                      className="flex min-h-12 w-full items-center justify-center rounded-md bg-primary px-5 py-3 text-center text-base font-semibold text-white shadow-sm transition-colors hover:bg-primary-dark active:scale-[0.99] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
                     >
                       Let&apos;s Start the Conversation
                     </Link>
 
-                    <div className="space-y-2 pt-2 text-sm text-[#647080]">
+                    <div className="space-y-2 pt-2 text-base text-text-muted">
                       <a
                         href={`tel:${COMPANY_INFO.contact.phone}`}
-                        className="flex items-center gap-2.5 min-h-[44px] hover:text-[#0F3A5F] transition-colors"
+                        className="flex min-h-11 items-center gap-2.5 transition-colors hover:text-primary focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
                       >
-                        <Phone className="w-4 h-4 text-[#0F3A5F]" />
+                        <Phone
+                          className="size-4 shrink-0 text-primary"
+                          aria-hidden="true"
+                        />
                         <span>{COMPANY_INFO.contact.phoneDisplay}</span>
                       </a>
+
                       <a
                         href={`mailto:${COMPANY_INFO.contact.email}`}
-                        className="flex items-center gap-2.5 min-h-[44px] hover:text-[#0F3A5F] transition-colors"
+                        className="flex min-h-11 items-center gap-2.5 transition-colors hover:text-primary focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
                       >
-                        <Mail className="w-4 h-4 text-[#0F3A5F]" />
-                        <span>{COMPANY_INFO.contact.email}</span>
+                        <Mail
+                          className="size-4 shrink-0 text-primary"
+                          aria-hidden="true"
+                        />
+                        <span className="break-all">
+                          {COMPANY_INFO.contact.email}
+                        </span>
                       </a>
                     </div>
-                  </div>
+                  </section>
                 </div>
               </motion.div>
             )}

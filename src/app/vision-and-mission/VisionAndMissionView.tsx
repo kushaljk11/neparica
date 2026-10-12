@@ -254,7 +254,7 @@ export function VisionAndMissionView() {
 
               <div className="vision-item space-y-4 text-sm sm:text-base text-[#647080] leading-relaxed">
                 <p>
-                  Neparica strives to become a leading <strong className="text-[#141820]">&quot;1 Stop SMB IT Partner&quot;</strong> in helping Small &amp; Mid-size Businesses (SMBs) through innovative technologies to reach and maximize client business goals by providing reliable, and scalable IT services and solutions.
+                  Neparica strives to become a leading <strong className="text-[#141820]">&quot;1 Stop IT Partner&quot;</strong> in helping Small &amp; Mid-size Businesses (SMBs) through innovative technologies to reach and maximize client business goals by providing reliable, and scalable IT services and solutions.
                 </p>
                 <p>
                   Our primary goal is to provide your company with the software tools needed to address real-world business issues and growth opportunities.
@@ -300,7 +300,7 @@ export function VisionAndMissionView() {
                   Our mission is to utilize cutting-edge technologies to offer <strong className="text-[#141820]">&quot;Right &amp; Affordable Solutions&quot;</strong> to our invaluable clients, by truly analyzing their business and operational processes while gathering requirements.
                 </p>
                 <p>
-                  This focus has allowed us to become a trusted 1 Stop SMB IT Partner, letting your business stride towards the summit of success in this cut-throat competitive world.
+                  This focus has allowed us to become a trusted 1 Stop IT Partner, letting your business stride towards the summit of success in this cut-throat competitive world.
                 </p>
                 <p>
                   Neparica holds the mission to deliver on-time, reliable IT-enabled services and solutions to meet our clients’ needs with top-notch quality, eventually providing a delightful experience in advancing their business interests. Our practice focuses on creating state-of-the-art products by excelling in the technologies that are dominant in each sector.

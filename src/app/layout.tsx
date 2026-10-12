@@ -1,4 +1,4 @@
-import type { Metadata } from 'next';
+﻿import type { Metadata } from 'next';
 import { Plus_Jakarta_Sans } from 'next/font/google';
 import './globals.css';
 import { Header } from '@/components/layout/Header';
@@ -15,7 +15,7 @@ const plusJakartaSans = Plus_Jakarta_Sans({
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.neparica.com'),
   title: {
-    default: 'Neparica – 1 Stop SMB IT Partner',
+    default: 'Neparica — 1 Stop IT Partner',
     template: '%s | Neparica'
   },
   description: 'Global IT company based in Chicago, USA providing full range of IT services, consulting, custom software, and 24/7 support for small and mid-sized businesses.',
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     apple: '/images/favicon.png'
   },
   openGraph: {
-    title: 'Neparica – 1 Stop SMB IT Partner',
+    title: 'Neparica — 1 Stop IT Partner',
     description: 'Chicago-based IT partner delivering enterprise-grade software and consulting at SMB rates since 2004.',
     url: 'https://www.neparica.com',
     siteName: 'Neparica Inc',
@@ -40,10 +40,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={plusJakartaSans.className}>
-      <body className="min-h-screen flex flex-col bg-white text-[#141820] antialiased">
+      <body className="min-h-screen flex flex-col bg-white text-text-main antialiased">
         <SmoothScrollProvider>
           <Header />
-          <div className="flex-1">{children}</div>
+          <main className="flex-1">{children}</main>
           <Footer />
         </SmoothScrollProvider>
       </body>

@@ -137,7 +137,7 @@ export default function BlogListingPage() {
                           {post.category}
                         </span>
                         {post.isSample && (
-                          <span className="px-2 py-0.5 rounded text-[10px] font-semibold bg-[#0F3A5F]/85 text-white shadow-sm">
+                          <span className="px-2 py-0.5 rounded text-base md:text-[10px] font-semibold bg-[#0F3A5F]/85 text-white shadow-sm">
                             Sample
                           </span>
                         )}
