@@ -105,10 +105,10 @@ export function FourDApproach() {
   return (
     <section
       ref={sectionRef}
-      className="bg-[#101827] text-white py-16 sm:py-20 md:py-24 border-b border-[#1e293b] relative overflow-hidden"
+      className="bg-dark text-white py-16 sm:py-20 md:py-24 border-b border-[#1e293b] relative overflow-hidden"
     >
       {/* Subtle background glow */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[350px] bg-[#0F3A5F]/20 rounded-full blur-[100px] pointer-events-none" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-150 h-87.5 bg-primary/20 rounded-full blur-[100px] pointer-events-none" />
 
       <Container className="relative z-10">
         {/* Centered Section Heading */}
@@ -124,10 +124,10 @@ export function FourDApproach() {
 
         {/* Thin, subtle process connector on desktop */}
         <div className="hidden lg:block relative mb-6 px-4">
-          <div className="h-[1px] w-full bg-white/10 relative overflow-hidden">
+          <div className="h-px w-full bg-white/10 relative overflow-hidden">
             <div
               ref={lineRef}
-              className="absolute inset-0 bg-gradient-to-r from-[#27DDE8]/80 via-[#27DDE8] to-[#27DDE8]/80 origin-left"
+              className="absolute inset-0 bg-linear-to-r from-accent-cyan/80 via-accent-cyan to-accent-cyan/80 origin-left"
             />
           </div>
         </div>
@@ -143,21 +143,21 @@ export function FourDApproach() {
             return (
               <div
                 key={step.number}
-                className="four-d-card group relative bg-[#152033] rounded-lg border border-white/10 p-5 sm:p-6 flex flex-col justify-between transition-all duration-200 hover:-translate-y-1 hover:border-[#27DDE8]/60 hover:shadow-lg hover:shadow-[#27DDE8]/5"
+                className="four-d-card group relative bg-[#152033] rounded-lg border border-white/10 p-5 sm:p-6 flex flex-col justify-between transition-all duration-200 hover:-translate-y-1 hover:border-accent-cyan/60 hover:shadow-lg hover:shadow-accent-cyan/5"
               >
                 <div>
                   {/* Top: Step number and small icon */}
                   <div className="flex items-center justify-between mb-4">
-                    <span className="text-xs font-mono font-semibold text-[#27DDE8] tracking-wider uppercase">
+                    <span className="text-xs font-mono font-semibold text-accent-cyan tracking-wider uppercase">
                       {step.number}
                     </span>
-                    <div className="w-7 h-7 rounded bg-white/5 border border-white/10 flex items-center justify-center text-[#27DDE8] transition-colors duration-200 group-hover:bg-[#27DDE8]/10 group-hover:border-[#27DDE8]/30">
+                    <div className="w-7 h-7 rounded bg-white/5 border border-white/10 flex items-center justify-center text-accent-cyan transition-colors duration-200 group-hover:bg-accent-cyan/10 group-hover:border-accent-cyan/30">
                       <Icon className="w-3.5 h-3.5" />
                     </div>
                   </div>
 
                   {/* Heading */}
-                  <h3 className="text-lg font-bold text-white tracking-tight mb-2 group-hover:text-[#27DDE8] transition-colors duration-200">
+                  <h3 className="text-lg font-bold text-white tracking-tight mb-2 group-hover:text-accent-cyan transition-colors duration-200">
                     {step.title}
                   </h3>
 

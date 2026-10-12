@@ -105,7 +105,7 @@ export function Services() {
                 <div className="pt-2 border-t border-[#F6F7F9]">
                   <Link
                     href={linkHref}
-                    className="inline-flex items-center gap-1.5 text-xs sm:text-sm font-semibold text-[#0F3A5F] group-hover:text-[#0a2740] transition-colors"
+                    className="inline-flex items-center gap-1.5 text-xs sm:text-sm font-semibold text-primary group-hover:text-[#0a2740] transition-colors"
                   >
                     <span>Explore Service</span>
                     <ArrowRight className="w-3.5 h-3.5 transition-transform duration-300 group-hover:translate-x-1" />

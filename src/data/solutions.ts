@@ -6,7 +6,7 @@ export const SOLUTIONS: SolutionItem[] = [
     title: 'E-commerce Solutions',
     shortDescription: 'Flexible and modular online store platforms engineered for seamless purchasing, security, and scalable revenue growth.',
     iconName: 'ShoppingCart',
-    image: '/images/cost-saving.jpg',
+    image: '/images/solutions/ecommerce.jpg',
     fullDescription: 'Neparica has been delivering proven eCommerce solutions for over 13 years. We help you choose the right platform and build your online store using a flexible, modular architecture designed for high conversion and sustained growth. We take the technology hassle away so you can focus entirely on customer acquisition and business expansion.',
     features: [
       'Custom Storefront Design optimized for mobile and desktop conversions',
@@ -34,7 +34,7 @@ export const SOLUTIONS: SolutionItem[] = [
     title: 'Customized Software',
     shortDescription: 'Bespoke desktop, cloud, and enterprise software designed around your exact business operational logic and workflows.',
     iconName: 'Cpu',
-    image: '/images/faster-delivery.jpg',
+    image: '/images/solutions/custom-software.jpg',
     fullDescription: 'Whether you need specialized desktop software or a sophisticated cloud-based enterprise application, Neparica helps you realize your vision. Off-the-shelf software often forces companies into awkward workarounds and expensive per-seat licenses. We engineer tailored software designed around your specific business logic, delivering a competitive edge that off-the-shelf tools cannot replicate.',
     features: [
       'Custom Database Architecture and High-Volume Data Processing',
@@ -62,7 +62,7 @@ export const SOLUTIONS: SolutionItem[] = [
     title: 'Mobile Applications',
     shortDescription: 'High-performance native and cross-platform mobile apps for iOS and Android that engage customers and streamline operations.',
     iconName: 'Smartphone',
-    image: '/images/convenience.png',
+    image: '/images/solutions/mobile-apps.jpg',
     fullDescription: 'Mobile app technology is rapidly evolving—is your business keeping pace? Neparica designs and develops native and cross-platform mobile applications that meet your business goals, user expectations, and budget using the right technology. From consumer-facing mobile portals to internal field operations tools, we deliver mobile experiences that delight users.',
     features: [
       'Native iOS (Swift) and Android (Kotlin) App Development',
@@ -90,7 +90,7 @@ export const SOLUTIONS: SolutionItem[] = [
     title: 'Dynamic Websites with Integrated CMS',
     shortDescription: 'High-impact, mobile-responsive dynamic websites equipped with intuitive content management to outperform competitors.',
     iconName: 'Layout',
-    image: '/images/quality.jpg',
+    image: '/images/solutions/website-design.jpg',
     fullDescription: 'A powerful, responsive, and dynamic website with cutting-edge design does not have to be prohibitively expensive. Neparica helps you outperform your strongest competitors with custom websites built on integrated content management systems. We combine visual polish with conversion-focused information hierarchy, allowing your team to update content effortlessly without touching code.',
     features: [
       'Custom Responsive UI/UX Design tailored to your brand personality',
@@ -118,7 +118,7 @@ export const SOLUTIONS: SolutionItem[] = [
     title: 'Customized Web Applications',
     shortDescription: 'Modern, multi-tiered cloud web applications engineered for complex data management, client portals, and SaaS platforms.',
     iconName: 'Globe',
-    image: '/images/discover.jpg',
+    image: '/images/solutions/web-applications.jpg',
     fullDescription: 'Our team of experts designs and develops fully customized web applications with the latest technologies to fuel your business growth. Whether you require an internal operational dashboard, a customer self-service portal, or a software-as-a-service (SaaS) product, Neparica delivers secure, scalable web systems that streamline complex tasks into effortless browser-based workflows.',
     features: [
       'Modern Single-Page (SPA) and Server-Rendered (SSR) Architectures',
@@ -146,7 +146,7 @@ export const SOLUTIONS: SolutionItem[] = [
     title: 'Affordable ERP & Accounting Systems',
     shortDescription: 'Integrated accounting and enterprise resource management software tailored specifically to mid-size companies.',
     iconName: 'BarChart3',
-    image: '/images/partnership.jpg',
+    image: '/images/solutions/accounting-erp.jpg',
     fullDescription: 'Neparica ERP and Accounting System is a single, integrated software platform that serves the operational and financial needs of mid-size companies across manufacturing, healthcare, retail, and hospitality. It bridges departments into a unified cloud database, allowing teams to collaborate seamlessly while giving executives real-time clarity over cash flow, inventory, and ledger accounts.',
     features: [
       'General Ledger, Accounts Payable (AP), and Accounts Receivable (AR)',

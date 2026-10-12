@@ -10,12 +10,12 @@ export function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-[#101827] text-white border-t border-[#1e293b] pt-16 pb-12">
+    <footer className="bg-primary text-white border-t border-white/10 pt-16 pb-12">
       <Container>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 lg:gap-8 pb-14 border-b border-white/10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 lg:gap-8 pb-14 border-b border-white/15">
           {/* Column 1: Brand & Office Details */}
           <div className="lg:col-span-2 space-y-5">
-            <div className="relative w-48 h-12 bg-white/95 p-1.5 rounded">
+            <div className="relative w-48 h-12 bg-white p-1.5 rounded shadow-sm">
               <Image
                 src="/images/logo-footer.png"
                 alt="Neparica Inc."
@@ -24,14 +24,14 @@ export function Footer() {
                 sizes="200px"
               />
             </div>
-            
-            <p className="text-sm text-[#9BAAAA] leading-relaxed max-w-sm">
+
+            <p className="text-sm text-white/80 leading-relaxed max-w-sm">
               Neparica is a global IT services and consulting firm based in Chicago, USA. Since 2004, we have provided comprehensive IT solutions, custom software, and 24/7 technical support to growing SMBs worldwide.
             </p>
 
             <div className="space-y-2.5 pt-2 text-xs sm:text-sm text-[#cbd5e1]">
               <div className="flex items-start gap-2.5">
-                <MapPin className="w-4 h-4 text-[#27DDE8] shrink-0 mt-0.5" />
+                <MapPin className="w-4 h-4 text-accent-cyan shrink-0 mt-0.5" />
                 <div>
                   <div className="font-semibold text-white">{COMPANY_INFO.contact.building}</div>
                   <div>{COMPANY_INFO.contact.address}</div>
@@ -40,7 +40,7 @@ export function Footer() {
               </div>
 
               <div className="flex items-center gap-2.5 pt-1">
-                <Phone className="w-4 h-4 text-[#27DDE8] shrink-0" />
+                <Phone className="w-4 h-4 text-accent-cyan shrink-0" />
                 <a
                   href={`tel:${COMPANY_INFO.contact.phone}`}
                   className="hover:text-white transition-colors"
@@ -50,7 +50,7 @@ export function Footer() {
               </div>
 
               <div className="flex items-center gap-2.5">
-                <Mail className="w-4 h-4 text-[#27DDE8] shrink-0" />
+                <Mail className="w-4 h-4 text-accent-cyan shrink-0" />
                 <a
                   href={`mailto:${COMPANY_INFO.contact.email}`}
                   className="hover:text-white transition-colors"
@@ -60,10 +60,10 @@ export function Footer() {
               </div>
 
               <div className="flex items-start gap-2.5 pt-1 text-xs text-[#9BAAAA]">
-                <Clock className="w-4 h-4 text-[#27DDE8] shrink-0 mt-0.5" />
+                <Clock className="w-4 h-4 text-accent-cyan shrink-0 mt-0.5" />
                 <div>
                   <div>{COMPANY_INFO.contact.businessHours.weekdays}</div>
-                  <div className="text-[#27DDE8] mt-0.5 font-medium">24/7 Global IT Support Available</div>
+                  <div className="text-accent-cyan mt-0.5 font-medium">24/7 Global IT Support Available</div>
                 </div>
               </div>
             </div>
@@ -71,7 +71,7 @@ export function Footer() {
 
           {/* Column 2: IT Services */}
           <div>
-            <h3 className="text-sm font-semibold tracking-wider text-white uppercase mb-4 pb-1 border-b border-white/10">
+            <h3 className="text-sm font-semibold tracking-wider text-white uppercase mb-4 pb-1 border-b border-white/15">
               Services
             </h3>
             <ul className="space-y-2.5 text-xs sm:text-sm">
@@ -79,7 +79,7 @@ export function Footer() {
                 <li key={item.title}>
                   <Link
                     href={item.href}
-                    className="text-[#9BAAAA] hover:text-white transition-colors inline-block"
+                    className="text-white/75 hover:text-white transition-colors inline-block"
                   >
                     {item.title}
                   </Link>
@@ -90,7 +90,7 @@ export function Footer() {
 
           {/* Column 3: Solutions */}
           <div>
-            <h3 className="text-sm font-semibold tracking-wider text-white uppercase mb-4 pb-1 border-b border-white/10">
+            <h3 className="text-sm font-semibold tracking-wider text-white uppercase mb-4 pb-1 border-b border-white/15">
               Solutions
             </h3>
             <ul className="space-y-2.5 text-xs sm:text-sm">
@@ -98,7 +98,7 @@ export function Footer() {
                 <li key={item.title}>
                   <Link
                     href={item.href}
-                    className="text-[#9BAAAA] hover:text-white transition-colors inline-block"
+                    className="text-white/75 hover:text-white transition-colors inline-block"
                   >
                     {item.title}
                   </Link>
@@ -109,7 +109,7 @@ export function Footer() {
 
           {/* Column 4: Resources & Map */}
           <div>
-            <h3 className="text-sm font-semibold tracking-wider text-white uppercase mb-4 pb-1 border-b border-white/10">
+            <h3 className="text-sm font-semibold tracking-wider text-white uppercase mb-4 pb-1 border-b border-white/15">
               Company & Legal
             </h3>
             <ul className="space-y-2.5 text-xs sm:text-sm mb-6">
@@ -117,7 +117,7 @@ export function Footer() {
                 <li key={item.title}>
                   <Link
                     href={item.href}
-                    className="text-[#9BAAAA] hover:text-white transition-colors inline-block"
+                    className="text-white/75 hover:text-white transition-colors inline-block"
                   >
                     {item.title}
                   </Link>
@@ -131,7 +131,7 @@ export function Footer() {
                 href={COMPANY_INFO.contact.googleMapsEmbedUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-1.5 text-xs text-accent-cyan hover:underline"
+                className="inline-flex items-center gap-1.5 text-xs text-accent-cyan hover:underline font-medium"
               >
                 <span>View Chicago Office on Google Maps</span>
                 <ExternalLink className="w-3 h-3" />
@@ -141,7 +141,7 @@ export function Footer() {
         </div>
 
         {/* Bottom Bar: Copyright & Socials */}
-        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-[#9BAAAA]">
+        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-white/65">
           <div>
             © 2004–{currentYear} Neparica Inc. All Rights Reserved.
           </div>

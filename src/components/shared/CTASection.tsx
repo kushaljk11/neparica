@@ -105,17 +105,17 @@ export function CTASection({
   return (
     <section
       ref={sectionRef}
-      className="relative bg-[#101827] text-white py-16 sm:py-20 md:py-24 overflow-hidden border-t border-[#1e293b]"
+      className="relative bg-dark text-white py-16 sm:py-20 md:py-24 overflow-hidden border-t border-[#1e293b]"
     >
       {/* Subtle background glow */}
-      <div className="absolute top-0 right-1/4 w-96 h-96 bg-[#0F3A5F]/40 rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute bottom-0 right-0 w-64 h-64 bg-[#27DDE8]/10 rounded-full blur-2xl pointer-events-none" />
+      <div className="absolute top-0 right-1/4 w-96 h-96 bg-primary/40 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute bottom-0 right-0 w-64 h-64 bg-accent-cyan/10 rounded-full blur-2xl pointer-events-none" />
 
       <Container className="relative z-10">
         <div className="max-w-3xl mx-auto text-center">
           <div
             ref={badgeRef}
-            className="inline-flex items-center gap-2 text-xs font-semibold tracking-wider uppercase text-[#27DDE8] bg-[#27DDE8]/10 border border-[#27DDE8]/20 px-3.5 py-1.5 rounded-full mb-5"
+            className="inline-flex items-center gap-2 text-xs font-semibold tracking-wider uppercase text-accent-cyan bg-accent-cyan/10 border border-accent-cyan/20 px-3.5 py-1.5 rounded-full mb-5"
           >
             1 Stop IT Partner
           </div>
@@ -163,7 +163,7 @@ export function CTASection({
               href={`tel:${COMPANY_INFO.contact.phone}`}
               className="inline-flex items-center gap-2 hover:text-white transition-colors"
             >
-              <PhoneCall className="w-4 h-4 text-[#27DDE8]" />
+              <PhoneCall className="w-4 h-4 text-accent-cyan" />
               <span>{COMPANY_INFO.contact.phoneDisplay}</span>
             </a>
             <span className="hidden sm:inline text-white/20">•</span>
@@ -171,7 +171,7 @@ export function CTASection({
               href={`mailto:${COMPANY_INFO.contact.email}`}
               className="inline-flex items-center gap-2 hover:text-white transition-colors"
             >
-              <Mail className="w-4 h-4 text-[#27DDE8]" />
+              <Mail className="w-4 h-4 text-accent-cyan" />
               <span>{COMPANY_INFO.contact.email}</span>
             </a>
             <span className="hidden sm:inline text-white/20">•</span>

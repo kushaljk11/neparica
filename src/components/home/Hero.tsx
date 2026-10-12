@@ -181,15 +181,19 @@ export function Hero() {
                   <div className="absolute inset-0 bg-linear-to-t from-[#0c1427]/80 via-transparent to-transparent pointer-events-none" />
 
                   {/* Floating Metric Card inside */}
-                  <div className="absolute bottom-5 left-5 right-5 p-4 rounded-xl bg-white/95 backdrop-blur border border-white/40 shadow-lg text-text-main">
-                    <div className="flex items-center justify-between">
-                      <div>
-                        <div className="text-xs uppercase font-semibold text-primary">Proven 4D Delivery Method</div>
-                        <div className="text-sm font-medium text-text-main">Discover • Design • Develop • Deliver</div>
+                  <div className="compact-overlay absolute bottom-3 sm:bottom-5 left-3 sm:left-5 right-3 sm:right-5 p-3 sm:p-4 rounded-xl bg-white/95 backdrop-blur border border-white/40 shadow-lg text-text-main">
+                    <div className="space-y-1 sm:space-y-1.5">
+                      <div className="flex items-center justify-between gap-2">
+                        <div className="text-[11px] sm:text-xs uppercase font-semibold tracking-wider text-primary truncate">
+                          Proven 4D Delivery Method
+                        </div>
+                        <span className="text-[10px] sm:text-xs font-bold text-accent-red bg-accent-red/10 px-2 py-0.5 sm:px-2.5 sm:py-1 rounded shrink-0 whitespace-nowrap">
+                          24/7 Delivery Cycles
+                        </span>
                       </div>
-                      <span className="text-xs font-bold text-accent-red bg-accent-red/10 px-2.5 py-1 rounded">
-                        22+ Yrs
-                      </span>
+                      <div className="text-[11px] sm:text-sm font-medium text-text-main truncate sm:whitespace-normal">
+                        Discover • Design • Develop • Deliver
+                      </div>
                     </div>
                   </div>
                 </div>

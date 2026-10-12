@@ -107,7 +107,7 @@ export default function AccountingSystemPage() {
               <ImageReveal className="rounded-2xl border border-[#E5E9EF] shadow-lg bg-[#F6F7F9]">
                 <div className="relative h-80 sm:h-96 w-full">
                   <Image
-                    src="/images/partnership.jpg"
+                    src="/images/solutions/accounting-erp.jpg"
                     alt="Neparica ERP and Accounting System"
                     fill
                     className="object-cover"
