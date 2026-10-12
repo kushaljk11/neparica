@@ -24,7 +24,7 @@ const PRINCIPLES = [
   {
     id: 2,
     icon: Cpu,
-    title: 'Practical Innovation',
+    title: 'Pragmatic Innovation',
     summary: 'We apply useful technologies to real operational challenges.',
     detail: 'We focus on dominant, reliable frameworks and modern software practices that provide tangible competitive edges without unnecessary complexity.'
   },

@@ -73,7 +73,7 @@ export function Services() {
       <Container>
         <SectionHeading
           eyebrow="What We Do"
-          title="Practical IT Services for Every Stage of Growth"
+          title="Pragmatic IT Services for Every Stage of Growth"
           description="Neparica delivers end-to-end technology services tailored to small and mid-sized enterprises. We combine local strategic advisory with global delivery power."
           align="center"
         />

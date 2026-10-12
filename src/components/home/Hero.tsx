@@ -101,7 +101,7 @@ export function Hero() {
               className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-primary/10 border border-primary/15 text-primary text-xs sm:text-sm font-semibold"
             >
               <span className="w-2 h-2 rounded-full bg-accent-red animate-pulse" />
-              <span>1 Stop IT Partner Since 2004</span>
+              <span>1 Stop IT Partner</span>
             </div>
 
             <div className="space-y-3">

@@ -141,7 +141,7 @@ export function CTASection({
               variant="primary"
               size="lg"
               withArrow
-              className="w-full sm:w-auto bg-[#0F3A5F] hover:bg-[#164a78] border border-[#24527d] text-white shadow-md transition-all duration-200"
+              className="w-full sm:w-auto bg-accent-red hover:bg-[#851213] border border-accent-red/30 text-white shadow-md shadow-accent-red/25 transition-all duration-200"
             >
               {primaryButtonText}
             </Button>
@@ -149,7 +149,7 @@ export function CTASection({
               href={secondaryButtonHref}
               variant="secondary"
               size="lg"
-              className="w-full sm:w-auto bg-white/10 hover:bg-white/15 text-white border-white/20 transition-all duration-200"
+              className="w-full sm:w-auto bg-white/10 hover:bg-white/15 text-white border-white/20 hover:border-accent-red/50 hover:text-accent-red transition-all duration-200"
             >
               {secondaryButtonText}
             </Button>

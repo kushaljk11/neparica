@@ -14,7 +14,7 @@ import { ImageReveal } from '@/components/animations/ImageReveal';
 
 export const metadata: Metadata = {
   title: 'Insights & Technology Resources',
-  description: 'Practical technology advice, software development insights, and IT strategies for growing small and mid-sized businesses.'
+  description: 'Pragmatic technology advice, software development insights, and IT strategies for growing small and mid-sized businesses.'
 };
 
 export default function BlogListingPage() {
@@ -27,7 +27,7 @@ export default function BlogListingPage() {
       <PageHero
         eyebrow="INSIGHTS & RESOURCES"
         title="Insights for Smarter Business Decisions"
-        description="Practical technology advice, software development insights, and IT strategies for growing businesses."
+        description="Pragmatic technology advice, software development insights, and IT strategies for growing businesses."
         breadcrumbs={[{ label: 'Blog' }]}
       />
 

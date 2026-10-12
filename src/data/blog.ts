@@ -77,7 +77,7 @@ export const BLOG_POSTS: BlogPost[] = [
     slug: 'digital-marketing-strategies-for-small-businesses',
     title: 'Digital Marketing Strategies for Small Businesses',
     category: 'Digital Marketing',
-    excerpt: 'Explore practical ways to improve your online visibility and reach potential customers.',
+    excerpt: 'Explore pragmatic ways to improve your online visibility and reach potential customers.',
     image: '/images/blog/blog-digital-marketing.jpg',
     isSample: true,
     content: [

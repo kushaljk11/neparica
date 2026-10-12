@@ -237,7 +237,7 @@ export function MobileMenu() {
                     <Link
                       href="/contact"
                       onClick={closeMenu}
-                      className="flex min-h-12 w-full items-center justify-center rounded-md bg-primary px-5 py-3 text-center text-base font-semibold text-white shadow-sm transition-colors hover:bg-primary-dark active:scale-[0.99] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+                      className="flex min-h-12 w-full items-center justify-center rounded-md bg-accent-red px-5 py-3 text-center text-base font-semibold text-white shadow-md shadow-accent-red/25 transition-colors hover:bg-[#851213] active:scale-[0.99] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-red"
                     >
                       Let&apos;s Start the Conversation
                     </Link>

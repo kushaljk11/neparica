@@ -21,7 +21,7 @@ const FOUR_D_STEPS = [
   {
     number: '02',
     title: 'Design',
-    description: 'Create practical, client-approved solutions tailored to your needs.',
+    description: 'Create pragmatic, client-approved solutions tailored to your needs.',
     icon: PenTool
   },
   {

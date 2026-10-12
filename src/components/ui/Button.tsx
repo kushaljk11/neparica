@@ -20,15 +20,15 @@ export function Button({
   children,
   ...props
 }: ButtonProps) {
-  const baseStyles = 'inline-flex items-center justify-center font-medium transition-all duration-200 rounded-[7px] cursor-pointer focus:outline-none focus:ring-2 focus:ring-[#0F3A5F]/30 disabled:opacity-50 disabled:pointer-events-none text-center';
+  const baseStyles = 'inline-flex items-center justify-center font-medium transition-all duration-200 rounded-[7px] cursor-pointer focus:outline-none focus:ring-2 focus:ring-accent-red/30 disabled:opacity-50 disabled:pointer-events-none text-center';
 
   const variants = {
-    primary: 'bg-[#0F3A5F] text-white hover:bg-[#0a2740] shadow-sm hover:shadow active:scale-[0.99]',
-    accent: 'bg-[#A31718] text-white hover:bg-[#851213] shadow-md shadow-[#A31718]/25 hover:shadow-lg active:scale-[0.99]',
-    secondary: 'bg-[#F6F7F9] text-[#141820] hover:bg-[#EEF1F4] border border-[#E5E9EF] active:scale-[0.99]',
-    outline: 'border border-[#0F3A5F] text-[#0F3A5F] hover:bg-[#0F3A5F] hover:text-white active:scale-[0.99]',
-    ghost: 'text-[#141820] hover:bg-[#F6F7F9]',
-    tertiary: 'text-[#0F3A5F] hover:text-[#0a2740] p-0 font-semibold inline-flex items-center gap-1.5 hover:underline'
+    primary: 'bg-accent-red text-white hover:bg-[#851213] shadow-md shadow-accent-red/25 hover:shadow-lg active:scale-[0.99]',
+    accent: 'bg-accent-red text-white hover:bg-[#851213] shadow-md shadow-accent-red/25 hover:shadow-lg active:scale-[0.99]',
+    secondary: 'bg-[#F6F7F9] text-text-main hover:bg-[#EEF1F4] border border-[#E5E9EF] hover:border-accent-red/40 hover:text-accent-red active:scale-[0.99]',
+    outline: 'border border-accent-red text-accent-red hover:bg-accent-red hover:text-white active:scale-[0.99]',
+    ghost: 'text-text-main hover:bg-[#F6F7F9] hover:text-accent-red',
+    tertiary: 'text-accent-red hover:text-[#851213] p-0 font-semibold inline-flex items-center gap-1.5 hover:underline'
   };
 
   const sizes = {

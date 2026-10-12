@@ -330,7 +330,7 @@ export default function ValuePropositionPage() {
             </h1>
 
             <p className="text-base sm:text-lg text-[#647080] max-w-3xl leading-relaxed">
-              Five practical advantages that shape how we work, deliver, and support your growth.
+              Five pragmatic advantages that shape how we work, deliver, and support your growth.
             </p>
           </div>
         </Container>
