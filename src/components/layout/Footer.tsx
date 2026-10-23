@@ -4,7 +4,7 @@ import Image from 'next/image';
 import { Container } from '@/components/shared/Container';
 import { COMPANY_INFO } from '@/data/company';
 import { FOOTER_SERVICES, FOOTER_SOLUTIONS, FOOTER_RESOURCES } from '@/data/navigation';
-import { MapPin, Phone, Mail, Clock, ExternalLink } from 'lucide-react';
+import { MapPin, Phone, Mail, Clock } from 'lucide-react';
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
@@ -107,12 +107,12 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* Column 4: Resources & Map */}
+          {/* Column 4: Resources */}
           <div>
             <h3 className="text-sm font-semibold tracking-wider text-white uppercase mb-4 pb-1 border-b border-white/15">
               Company & Legal
             </h3>
-            <ul className="space-y-2.5 text-xs sm:text-sm mb-6">
+            <ul className="space-y-2.5 text-xs sm:text-sm">
               {FOOTER_RESOURCES.map((item) => (
                 <li key={item.title}>
                   <Link
@@ -125,18 +125,6 @@ export function Footer() {
               ))}
             </ul>
 
-            {/* Office map preview button */}
-            <div className="pt-2">
-              <a
-                href={COMPANY_INFO.contact.googleMapsEmbedUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-1.5 text-xs text-accent-cyan hover:underline font-medium"
-              >
-                <span>View Chicago Office on Google Maps</span>
-                <ExternalLink className="w-3 h-3" />
-              </a>
-            </div>
           </div>
         </div>
 
